@@ -33,6 +33,9 @@ const readFileTool = tool(
     description:
       "用此工具来读取文件，当用户要求读取文件，查看代码，分析文件内容时，调用此工具。输入文件路径（可以是相对路径或者绝对路径）",
     schema: z.object({
+      // 在z.object({})里定义了一个字段filePath
+      // 这个字段必须是字符串：z.string()
+      // describe("要读取的文件路径") 是给这个字段加一个说明文字
       filePath: z.string().describe("要读取的文件路径"),
     }),
   },

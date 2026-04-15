@@ -97,6 +97,7 @@ const executeCommandTool = tool(
     description: "执行系统命令，支持指定工作目录，实时显示输出",
     schema: z.object({
       command: z.string().describe("要执行的命令"),
+      //.optional()表示字段可选，可传可不传
       workingDirectory: z.string().optional().describe("工作目录（推荐指定）"),
     }),
   },
