@@ -9,7 +9,7 @@ import {
 } from "@langchain/core/messages";
 
 const model = new ChatOpenAI({
-  model: process.env.MODEL_NAME,
+  modelName: process.env.MODEL_NAME,
   apiKey: process.env.OPENAI_API_KEY,
   temperature: 0,
   configuration: {
